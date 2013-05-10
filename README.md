@@ -24,8 +24,8 @@ app.eventRouter = expressTransmit(app);
 
 // Provide an endpoint; external for prod, dummy data for development
 app.configure('production', function(){
-  app.transmit.provide(":method/data/:collection/:id", function(params, data, callback){
-    http.get("http://myapi.com/users/" + params.id", function(res){
+  app.transmit.provide(':method/data/:collection/:id', function(params, data, callback){
+    http.get('http://myapi.com/users/' + params.id, function(res){
       var chunks = [];
 
       res.on('data', function(chunk){
@@ -35,17 +35,17 @@ app.configure('production', function(){
       res.on('end', function(){
         callback(null, JSON.parse(chunks.join(''));
       });
-    }).on("error", function(error){
+    }).on('error', function(error){
       callback(error);
     });
   });
 });
 
 app.configure('development', function(){
-  app.transmit.provide(":method/data/:collection/:id", function(params, data, callback){
+  app.transmit.provide(':method/data/:collection/:id', function(params, data, callback){
     callback(null, { 
       id: 1,
-      name: "Jack" 
+      name: 'Jack' 
     });
   });
 });
