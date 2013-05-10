@@ -52,7 +52,7 @@ app.configure('development', function(){
 
 // Perform a request
 app.get('/api/users/1', function(req, res){
-  app.request('get/data/users/1', function(params, data, function(err, data){
+  app.transmit.request('get/data/users/1', function(params, data, function(err, data){
     if(!err){
       res.json(data);
     }else{
