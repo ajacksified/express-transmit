@@ -4,6 +4,10 @@ express-transmit
 An [express.js](https://github.com/visionmedia/express) utility for firing off
 named events that you expect to callback.
 
+This is a slight change over an eventing system in that you expect a callback
+to be called, and you want control over the response; for example, firing off
+requests to either an API or stubbing local data based on configuration.
+
 Installation
 ------------
 
