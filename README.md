@@ -14,7 +14,7 @@ npm install express-transmit
 Usage
 -----
 
-```
+```javascript
 var express = require('express'),
     expressTransmit = require('express-transmit'),
     app = express.createServer(),
