@@ -1,0 +1,35 @@
+{
+  "name": "express-transmit",
+  "version": "0.0.1",
+  "description": "event dispatch for express",
+  "main": "index.js",
+
+  "scripts": {
+    "test": "mocha -R spec --recursive test"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ajacksified/express-transmit.git"
+  },
+
+  "keywords": [
+    "express",
+    "dispatch",
+    "transmit",
+    "event",
+    "route"
+  ],
+
+  "author": "ajacksified",
+  "license": "MIT",
+
+  "dependencies": {
+    "express": "3.x"
+  },
+
+  "devDependencies": {
+    "mocha": "1.8.2",
+    "chai": "1.5.0"
+  }
+}
