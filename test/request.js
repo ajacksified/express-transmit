@@ -21,5 +21,21 @@ describe('expressTransmit', function(){
 
     app.transmit.request("get/data/users", data, callback);
   });
+
+  it('should return an error if no matching route, instead of hagnging forever', function(){
+    var app = {},
+        path = ":method/data/:collection",
+        data = { format: "long" },
+        callback = function(err){
+          assert.equal(err, 'No matching routes.');
+        },
+        fn = function(){};
+
+    app = expressTransmit(app);
+
+    app.transmit.provide(path, fn);
+
+    app.transmit.request("derp", data, callback);
+  });
 });
 
